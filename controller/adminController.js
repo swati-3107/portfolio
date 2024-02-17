@@ -9,5 +9,6 @@ exports.addUser = asyncHandler(async (req, res) => {
     message: `Hey, my name is ${name} : ${mobile} : I've message For uh  ${message} `,
   });
   await User.create(req.body);
+  console.log(req.body);
   res.status(201).json({ message: "User Add Success" });
 });
